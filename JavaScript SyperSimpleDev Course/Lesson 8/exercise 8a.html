@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>8 a</title>
+  </head>
+<script>
+  function comparePrices ( product1, product2) {
+  if (product1.price < product2.price) {
+    return product1.name;
+  } else {return product2.name;}
+  }
+
+  const product1 = {
+    name: `basketball`,
+    price: 2095,
+    [`delivery-time`]: `3 days`,
+  };
+
+  const product2 = {
+    name: `football`,
+    price: 50,
+  }
+
+  console.log(comparePrices( product1, product2));
+  
+
+  console.log(product1);
+  product1.price = 500;
+  console.log(product1.price);
+  console.log(product1[`delivery-time`]);
+</script>  
+<body>
+
+</body>
+</html>

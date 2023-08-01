@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>11a</title>
+   
+  </head>
+  <body>
+  <script>
+  /* 11a 
+  last number modified*/
+  const nums = [10, 20, 30];
+  nums[2] = 99;
+  console.log(nums);
+
+
+  
+  /* 11b 
+  returns last value*/
+  function getLastValue (array) {
+  const value = array.length - 1;
+  return array[value];
+  }
+  console.log(getLastValue([10, 20, 8]))
+
+
+  /* 11c 
+  changes with places first and last value*/
+  function arraySwap (array) {
+  const lastIndex = array.length - 1;
+  
+  const lastValue = array[lastIndex];
+  const firstValue = array[0];
+
+  array[lastIndex] = firstValue;
+  array[0] = lastValue;
+
+  return array;
+  }
+  
+  console.log(arraySwap(['hi', 'hello', 'hey']))
+
+
+  </script>  
+  
+  </body>
+  </html>

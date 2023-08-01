@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>11a</title>
+   
+  </head>
+  <body>
+
+
+  <script>
+    /*11lm min and max index in array*/
+  function minMax(nums) {
+   const result = {
+    min: null,
+    max: null
+   };
+
+    for (let i = 0; i < nums.length; i++) {
+      const value = nums[i];
+      if (result.min === null || value < result.min) 
+      {result.min = value;}
+      if (result.max === null || value > result.max) {result.max = value;}
+      
+    }
+   return result;
+  
+  }
+
+      console.log(minMax([1, -3, 5]));
+      console.log(minMax([-2, 3, -5, 7, 10]));
+      console.log(minMax([]));
+      console.log(minMax([3]));
+
+
+
+
+
+   /*11n counts words*/
+   function countWords(words) {
+    const result = {};
+    for (let i = 0; i < words.length; i++ ) {
+      const word = words[i];
+      if (!result[word]) {result[word] = 1}
+      else {result[word]++}
+    }
+    return result;
+   }
+   console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+  
+
+
+
+
+   /*11op shows if string 'search' is an array and displays its index if not, displays -1*/
+   let words = ['hello', 'world', 'search', 'good', 'search'];
+   let index = -1;
+
+   for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+      break;
+    }
+   }
+   console.log(index);
+
+   words = ['not', 'found'] 
+   index = -1
+   for (let i = 0; i < words.length; i++) {
+    if (words[i] === 'search') {
+      index = i;
+      break;
+    }
+   }
+   console.log(index);
+
+
+  /*11q finds index of word with function*/
+    function findIndex(array, word) {
+
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] === word) {
+        return i;
+      }
+    }
+
+    return -1;
+    }
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'red'));
+    console.log(findIndex(['green', 'red', 'blue', 'red'], 'white'));
+
+</script>
+</body>
+</html>
+
+

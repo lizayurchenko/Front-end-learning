@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>Lesson 5 calculator</title>
+  </head>
+
+<body>
+<script>
+  let calculation = ``;
+  showResult ();
+
+  function updateCalculatuion (value) {
+    calculation += value;
+    showResult ();
+  };
+
+  function showResult () {
+  document.querySelector('.js-result').innerHTML = calculation;
+  };
+</script>
+
+
+<h1>Calculator</h1> 
+
+<button onclick="
+ updateCalculatuion(`1`);
+">1</button>
+
+<button onclick="
+updateCalculatuion(`2`);
+">2</button>
+
+
+<button onclick="
+updateCalculatuion(`3`);
+">3</button>
+
+<button onclick="
+updateCalculatuion(`4`);
+">4</button>
+
+<button onclick="
+updateCalculatuion(`5`);
+">5</button>
+
+<button onclick="
+updateCalculatuion(`6`);
+">6</button>
+
+<button onclick="
+updateCalculatuion(`7`);
+">7</button>
+
+<button onclick="
+updateCalculatuion(`8`);
+">8</button>
+
+<button onclick="
+updateCalculatuion(`9`);
+console.log(calculation);
+">9</button>
+
+<button onclick="
+updateCalculatuion(`0`);
+">0</button>
+
+<button onclick="
+updateCalculatuion(` . `);
+">.</button>
+
+<button onclick="
+updateCalculatuion(` + `);
+">+</button>
+
+<button onclick="
+updateCalculatuion(` - `);
+">-</button>
+
+<button onclick="
+updateCalculatuion(` * `);
+">*</button>
+
+<button onclick="
+updateCalculatuion(` / `);
+">/</button>
+
+<button onclick="
+calculation = eval(calculation);
+showResult ();
+">=</button>
+
+
+
+<p class="js-result"></p>
+</body>
+</html>

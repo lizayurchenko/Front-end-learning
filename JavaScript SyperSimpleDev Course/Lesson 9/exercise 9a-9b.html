@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>9a 9b</title>
+  </head>
+
+
+<body>
+<button class="js-button-1">9a</button>
+<button  class="js-button-2" onclick="changeText();">9b</button>
+
+
+
+<script>
+const button = document.querySelector('.js-button-1');
+console.log(button);
+
+function changeText () {
+ const button2 = document.querySelector('.js-button-2');
+
+ if (button2.textContent === `9b`) {button2.textContent = `Changed`;} else {button2.textContent = `9b`};
+};
+
+</script>
+</body>
+</html>

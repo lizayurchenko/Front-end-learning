@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>10d</title>
+   <style>
+   .js-button1, .js-button2, .js-button3 {
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 13px;
+    margin-right: 10px;
+    cursor: pointer;
+   }
+   .js-clicked-button{
+    color: rgb(255, 255, 255);
+    background-color: rgb(185, 185, 185);
+   }
+   </style>
+  </head>
+<body>
+
+<button class="js-button1" onclick="clickButton ('.js-button1')">Gaming</button>
+<button class="js-button2" onclick="clickButton ('.js-button2')">Music</button>
+<button class="js-button3" onclick="clickButton ('.js-button3')">Tech</button>
+
+
+<script>
+ function clickButton (selector) {
+  const button = document.querySelector(selector)
+
+  if (!button.classList.contains('js-clicked-button')) {
+      removeLastStyle ()
+      button.classList.add('js-clicked-button');
+  } else {button.classList.remove('js-clicked-button');}
+ }
+
+ function removeLastStyle () {
+  const clickedButton = document.querySelector('.js-clicked-button') 
+  if (clickedButton) {
+  clickedButton.classList.remove('js-clicked-button');}
+ }
+
+</script>  
+</body>
+</html>

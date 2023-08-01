@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>7 a</title>
+  </head>
+<script>
+
+function convertToFahrenheit (celsius) {
+  return ((celsius * 9 / 5) + 32);
+}
+
+function convertToCelsius (fahrenheit) {
+  return ((fahrenheit - 35) * 5 / 9);
+}
+
+function convertTemperature (degrees, unit) {
+  if (unit === `C`) {
+    const result = convertToFahrenheit (degrees) + `F` ;
+    return (`${result}`);
+  } 
+  
+  else { const result = convertToCelsius (degrees) + `C` ;
+    return (`${result}`); }
+}
+
+console.log(convertTemperature (80, `F`));
+</script>  
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

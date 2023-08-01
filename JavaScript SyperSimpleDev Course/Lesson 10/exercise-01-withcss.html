@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>DOM projects</title>
+   <style>
+   .js-subscribe-button {
+    font-weight: bold;
+    font-family: Arial;
+    color: white;
+    background-color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border: none;
+    transition: 0.15s;
+    cursor: pointer;
+   }
+   .js-subscribe-button:hover {
+    opacity: 0.9;
+   }
+   .js-subscribe-button:active {
+    opacity: 0.7;
+   }
+   .is-subscribed{
+    background-color: rgb(240, 240, 240);
+    color: black;
+    border: none;
+   }
+   p {
+    font-family: Arial;
+    margin: 10;
+   }
+   .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 6px rgb(0, 0, 0, 0.3);
+    width: 190px;
+    padding: 20px;
+   }
+  
+   </style>
+  </head>
+<script>
+  function subscribeButton() {
+  const buttonElement = document.querySelector(`.js-subscribe-button`);
+
+  if (buttonElement.textContent === `Subscribe`) {
+    buttonElement.textContent = `Subscribed`
+    buttonElement.classList.add('is-subscribed'); 
+  } else {buttonElement.textContent = `Subscribe`;        buttonElement.classList.remove('is-subscribed'); 
+  }
+  }
+</script>  
+
+<body>
+<div class="box">
+  <p>YouTube Subscribe Button</p>
+  <button class="js-subscribe-button" 
+  onclick="subscribeButton()">Subscribe</button>
+</div>
+</body>
+</html>

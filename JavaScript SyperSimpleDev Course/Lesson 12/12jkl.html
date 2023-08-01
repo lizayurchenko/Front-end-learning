@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>12</title>
+  
+  
+  </head>
+<body>
+<script>
+  /*12jk*/
+  const multiply = (a, b) => { return a * b; }
+  console.log(multiply(2, 3));
+  console.log(multiply(7, 10));
+
+
+
+  /*12l*/
+  function countPositiveNumbers (nums) {
+    let positiveNumbers = 0;
+    nums.forEach(nums => {
+    if (nums > 0) {positiveNumbers++;}
+    });
+    return positiveNumbers;
+  }
+  
+  console.log(countPositiveNumbers ([1, -2, -5, 4, 8])); 
+  console.log(countPositiveNumbers ([-2, 3, -5, 7, 10])); 
+
+
+
+ /*12m*/
+ function addNum (array, num) {return array.map((value) => value + num);}
+ console.log(addNum ([1, -2, -5, 4, 8], 2)); 
+ console.log(addNum([-2, -1, 0, 99], 2));
+
+
+
+ /*12no*/
+ function removeEgg(foods) {
+  let eggsRemoved = 0;
+
+  return foods.filter((food) => {
+    if (food === 'egg' && eggsRemoved < 2) {
+      eggsRemoved++;
+      return false;
+    }
+      return true;
+  });
+ }
+ console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']));
+
+</script>
+</body>

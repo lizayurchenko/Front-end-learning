@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <title>10a</title>
+   <style>
+    .amazon-button{
+      background-color: rgb(255, 216, 20);
+      border: none;
+      padding: 8px 50px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+    .amazon-button:hover{
+      opacity: 0.8;
+    }
+    .amazon-button:active{
+      opacity: 0.6;
+    } 
+    .button-div{
+      margin-top: 20px;
+    }
+    .uber1, .uber2{
+      padding: 12px 17px;
+      font-weight: bold;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+    }
+    .uber1{
+      background-color: black;
+      color: white;
+      margin-right: 15px;
+    }
+    .uber2{
+      background-color: rgb(230, 230, 230);
+    }
+    .is-requerd{
+      background-color: rgb(230, 230, 230);
+      color: black;
+    }
+    .click-uber2{
+      background-color: black;
+      color: white;
+    }
+   </style>
+  </head>
+<body>
+
+<button class="amazon-button js-amazon-button" onclick="clickButton ()" >Add to Cart</button>
+
+<div class="button-div">
+<button class="uber1" onclick="clickButtonUber1 ()">Request now</button>
+<button class="uber2" onclick="clickButtonUber2 ()">Schedule for later</button>
+</div>
+
+<script>
+ function clickButton () {
+  const button = document.querySelector('.js-amazon-button');
+
+  if (button.textContent === 'Add to Cart') {
+    button.textContent = 'Added to Cart'
+  } else {button.textContent = 'Add to Cart'}
+ }
+
+
+ function clickButtonUber1 () {
+  const uber1 = document.querySelector('.uber1');
+
+  if (uber1.textContent === 'Request now') {
+    uber1.textContent = 'Requerd';
+    uber1.classList.add('is-requerd');
+  } else{uber1.textContent = 'Request now';
+    uber1.classList.remove('is-requerd');}
+ }
+
+
+
+ function clickButtonUber2 () {
+  const uber2 = document.querySelector('.uber2');
+
+  if (uber2.textContent === 'Schedule for later') {
+    uber2.textContent = 'Scheduled for later';
+    uber2.classList.add('click-uber2');
+  } else {uber2.textContent = 'Schedule for later';
+    uber2.classList.remove('click-uber2');}
+ }
+  
+</script>  
+</body>
+</html>
