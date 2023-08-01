@@ -1,0 +1,12 @@
+body {
+    background-color: moccasin;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    color:blueviolet;
+    margin-left: 20px;
+}
+.testClass {
+    color: magenta;
+    font-size: larger;
+}

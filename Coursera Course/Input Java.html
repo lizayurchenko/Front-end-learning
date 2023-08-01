@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My first Java skript attempts</title>
+
+</head>
+
+<body>
+    
+<script>
+function displayInput()
+{
+var testInput = document.getElementById("name").value;
+if (testInput.length == 0)
+{document.getElementById("para").innerHTML = "Hello, you didn`t tipe anything!";}
+else document.getElementById("para").innerHTML = testInput;
+}
+</script>
+
+<H1 style="color:mediumvioletred";>Let's see another button</H1>
+<input id="name" type="text"/>
+<button onclick="displayInput();">Color It</button>
+<p id="para" style="color:mediumorchid";></p>
+
+</body>

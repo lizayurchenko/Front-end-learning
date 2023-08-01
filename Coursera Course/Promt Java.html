@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Prompt</title>
+
+</head>
+
+<body>
+    <script>
+        function myPrompt()
+        {
+        var person = prompt("Please, enter your name","Fred");
+        if (person !="") 
+        document.getElementById("test").innerHTML = "Hello, " + person + 
+        "! How are you today?";
+        else {alert("Hey, no input!");}
+        }
+        </script>
+        <H1 style="color:darkred; 
+        font-family: 'Segoe UI', Tahoma, 
+        Geneva, Verdana, sans-serif;">JavaScript Prompt Box</H1>
+        <button onclick="myPrompt()" style="color: green; 
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        Click me</button>
+        <p id="test" style="font-family: 'Segoe UI', 
+        Tahoma, Geneva, Verdana, sans-serif;"></p>
+    
+        
+</body>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>My first Java skript attempts</title>
+<link rel="stylesheet" type="text/css" href="1.css">
+</head>
+
+<body>
+<script>
+{function checkField1() 
+{
+var field = document.getElementById("field1").value;
+if(field.length != "" ) 
+// != means 'not equal to'
+   document.getElementById("message1").innerHTML = " Input accepted:)";
+else 
+   document.getElementById("message1").innerHTML = " No input:(";
+}}
+
+
+{function checkField2() {
+var field = document.getElementById("field2").value;
+if(field.length < 5)
+   document.getElementById("message2").innerHTML = " Too short!";
+else 
+   document.getElementById("message2").innerHTML = " That`s long enough!";
+}}
+
+{function checkField3() {
+var field = document.getElementById("field3").value;
+if(field.length < 5)
+   document.getElementById("message3").innerHTML = " Too short!";
+else 
+   document.getElementById("message3").innerHTML = " That`s long enough!";
+}}
+</script>
+
+<H1>JavaScript onblur Event Tests</H1>
+<p class="testClass">Your name</p><input id="field1" type="text" onblur="checkField1()"/><span id="message1"></span>
+ <!-- //span is tag that have no visiability until we add text to him  -->
+<p class="testClass">Your date of birth</p><input id="field2" type="text" onblur="checkField2()"/><span id="message2"></span>
+<p class="testClass">Your telefon number</p><input id="field3" type="text" onblur="checkField3()"/><span id="message3"></span>
+
+</body>
