@@ -1,0 +1,30 @@
+.a12 {
+display: flex;
+flex-direction: row;
+}
+
+.b12{
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+}
+
+.c12{
+margin-top: 20px;
+display: flex;
+flex-direction: row;
+justify-content: space-between;  
+}
+
+.d12{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  border-color: grey;
+  height: 50px;
+  border-width: 1px;
+  border-style: solid;
+  justify-content: space-between;
+  align-items: center;
+
+}

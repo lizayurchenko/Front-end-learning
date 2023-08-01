@@ -1,0 +1,222 @@
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 4px;
+  margin-top: 4px;
+ } 
+ .first {
+  font-family: Tahoma;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+ }
+ .second{
+ font-family: Arial;
+ font-weight: bold;
+ font-size: 20px;
+ margin-bottom: 3.5px;
+ }
+ .third{
+  font-family: Arial;
+  font-size: 14px;
+  font-style: italic;
+  color: rgb(231, 69, 69);
+  margin-top: 0px;
+ }
+ .four{
+  font-family: Verdana;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 30px;
+  width: 290px;
+ }
+ .five{
+  font-family: Verdana;
+  font-size: 14px;
+  color: grey;
+  margin-top: 2.5px;
+  width: 290px;
+ }
+ .sichs{
+  font-family: Verdana;
+  font-size: 14px;
+  margin-top: 25px;
+  width: 290px;
+  line-height: 19px;
+  margin-bottom: 15px;
+ }
+ .button1{
+  font-family: Verdana;
+  background-color: rgba(12, 104, 12,0.8);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  transition: 0.15s;
+ }
+ .button1:hover{
+  opacity: 0.8;
+ }
+ .button1:active{
+  opacity: 0.7;
+ }
+ .seven{
+  padding-top: 25px;
+  padding-bottom: 12px;
+  font-family: Arial;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+ }
+ .eight{
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+  padding-bottom: 12px;
+ }
+ .nine{
+  font-family: Arial;
+  font-size: 14px;
+  text-align: center;
+  color: rgb(85, 85, 234);
+  cursor: pointer;
+  transition: 0.15s;
+ }
+ .nine:hover{
+  text-decoration: underline;
+ }
+ .nine:active{
+  text-decoration: underline;
+  color: rgb(23, 23, 205);
+ }
+ .apple1{
+  font-family: Arial;
+  font-size: 13px;
+  text-align: center;
+  color: rgb(227, 77, 77);
+  padding-top: 35px;
+  padding-bottom: 5px;
+  line-height: 10px;
+ }
+ .apple2{
+  font-family: Arial;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(4, 3, 3, 0.85);
+  line-height: 17px;
+ }
+ .apple3{
+  font-family: Arial;
+  font-size: 27px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(4, 3, 3, 0.85);
+  line-height: 32px;
+ }
+ .apple4{
+  font-family: Arial;
+  font-size: 13px;
+  text-align: center;
+  color: rgba(4, 3, 3, 0.7);
+  line-height: 25px;
+ }
+ .apple5{
+  background-color: rgba(71, 71, 235, 0.854);
+  color: white;
+  font-family: Arial;
+  font-size: 11px;
+  border: none;
+  border-radius: 14px;
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 13px;
+  padding-right: 13px;
+  cursor: pointer;
+  transition: 0.15s;
+ }
+  .apple5:hover{
+  opacity: 0.8;
+ }
+  .apple5:active{
+  opacity: 0.7;
+ }
+ div{
+  text-align: center;
+  padding-top: 8px;
+ }
+ .twiter1 {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 30px;
+ }
+ .twiter2 {
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  color: grey;
+  font-weight: 100;
+ }
+ .twiter3{
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  width: 450px;
+  line-height: 19px;
+ }
+ .twiter4{
+  font-family: Arial;
+  font-size: 14px;
+  text-align: left;
+  width: 450px;
+  line-height: 19px;
+  padding-top: 16px;
+  padding-bottom: 35px; 
+ }
+ .twiter5{
+ color: rgb(13, 127, 249);
+ cursor: pointer;
+ transition: 0.15s; 
+ }
+ .twiter5:hover{
+  color: rgb(21, 112, 208);
+  text-decoration: underline;
+ }
+ .twiter5:active{
+  color: rgb(23, 97, 176);
+  text-decoration: underline;
+ }
+ .money1{
+  font-family: Arial;
+  font-size: 28px;
+  text-align: left;
+  width: 250px;
+ }
+ .money2{
+  color: gray;
+  font-size: 16px;
+ }
+ .money3{
+  font-family: Arial;
+  font-size: 13px;
+  color:rgba(0, 128, 0, 0.797);
+  line-height: 17px;
+  text-align: left;
+ }
+ .money4{
+  font-family: Arial;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: left;
+  color: grey;
+  margin-bottom: 50px;
+ }
+ .money5{
+  color: rgb(229, 74, 74);
+ }

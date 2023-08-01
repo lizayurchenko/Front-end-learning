@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Lesson 7</title>
+  </head>
+<body>
+<style>
+  
+.cat1 {
+  width: 200px;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: 0.15s;
+  margin-left: 15px;
+}
+.cat1:hover{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4); 
+}
+.cat1:active{
+  opacity: 0.8;
+}
+.cat2 {
+  width: 134px;
+  height: 134px;
+  object-fit: cover;
+  object-position: center;
+  margin-left: 15px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.cat2:hover{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4); 
+}
+.cat2:active{
+  opacity: 0.8;
+}
+.cat3{
+  width: 134px;
+  height: 134px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 100px;
+  margin-left: 15px; 
+  cursor: pointer;
+  transition: 0.15s;
+}
+.cat3:hover{
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.4); 
+}
+.cat3:active{
+  opacity: 0.8;
+}
+.input1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 15px;
+  padding-bottom: 9px;
+  padding-top: 9px;
+  width: 104px;
+  padding-right: 60px;
+  padding-left: 10px;
+  border-color: rgba(128, 128, 128, 0.702);
+  border-radius: 9px;
+  border-width: thin;
+  transition: 0.15s;
+  cursor: pointer;
+  outline: none;  
+}
+.input1:hover {
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.427);
+}
+.input1:active{
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.546);
+}
+.input2{
+margin-left: 15px;
+padding-top: 8px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+width: 370px;
+border-color: rgba(0, 0, 0, 0.087);
+border-radius: 17px;
+outline: none;
+}
+.email {
+  font-family: Arial;
+  color: rgba(0, 0, 0, 0.531);
+  font-size: 10px;
+  margin-left: 15px;
+  margin-top: 45px;
+  margin-bottom: 3px;
+}
+.input3{
+  margin-left: 15px;
+  margin-top: 2px;
+  width: 240px;
+  outline: none;
+  border-width: thin;
+}
+.input3:hover{
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.323);
+}
+.agree{
+  margin-left: 15px;
+  margin-top: 13px;
+  margin-bottom: 0px;
+  font-family: Arial;
+  color: rgba(0, 0, 0, 0.531);
+  font-size: 10px;
+}
+.join {
+  margin-left: 15px;
+  margin-top: 13px;
+  margin-bottom: 45px;
+  font-family: Arial;
+  background-color: rgba(87, 87, 244, 0.928);
+  color:white;
+  border:none;
+  border-radius: 18px;
+  padding-left: 85px;
+  padding-right: 85px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.join:hover{
+  opacity: 0.8;
+}
+.join:active{
+  opacity: 0.7;
+}
+.tweet{
+  align-items: center;
+  vertical-align: middle;
+}
+.cat4{
+margin-left: 15px;
+width: 44px;
+height: 44px;
+object-fit: cover;
+object-position: center;
+border-radius: 100px;
+float: left;
+margin-right: 10px;
+
+}
+.happening{
+  font-family: Arial;
+  vertical-align: middle;
+  color: grey;
+  font-size: 14px;
+  margin-top: 100px;
+  
+}
+.button-tweet{
+  background-color: rgb(0, 145, 255);
+  color: white;
+  border: none;
+  padding-left: 13px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-right: 13px;
+  border-radius: 14px;
+  font-weight: bold;
+  float: right;
+  margin-left: 100px;
+}
+.profile-picture {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.text-box {
+  font-size: 18px;
+  border: none;
+  width: 300px;
+  vertical-align: middle;
+}
+
+.tweet-button {
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+</style>
+<img class="cat1" src="cat.jpg">
+<img class="cat2" src="cat.jpg">
+<img class="cat3" src="cat.jpg">  
+<br>
+<input class="input1" type="text" placeholder="Search"></input>
+<br>
+<input class="input2" type="text" placeholder="Search Google or type a URL "></input>
+<br>
+<p class="email">Email</p>
+<input class="input3" type="text"></input>
+<p class="agree">By clicking Agree & Join, you agree to the Privacy Policy.</p>
+<button class="join">Agree & Join</button>
+<br>
+<div class="tweet">
+ 
+<img class="profile-picture" src="cat.jpg">
+<p class="happening"> What`s happening? </p>
+<button class="button-tweet">Tweet
+
+
+</div>
+</body>
+</html>

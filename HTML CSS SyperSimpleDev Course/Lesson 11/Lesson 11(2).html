@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lesson 11(2)</title>
+</head>
+<body>
+<style>
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  
+}
+
+.divfor3profiles{
+  display: grid;
+  grid-template-columns: 134px 134px 134px;
+  height: 210px;
+  column-gap: 12px;
+  font-family: Arial;
+  
+}
+.divforoliver, .divformimi, .divforbobik{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.roundphoto{
+  width: 100%;
+  border-radius: 100px;
+  margin-left: 5px;
+  margin-top: 4px;
+}
+.mainfoto{
+  width: 134px;
+  height: 124px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  transition: 0.15s;
+}
+.name{
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-family: Arial;  
+}
+.mutualfriends{
+  font-size: 11px;
+  padding-left: 7px;
+  padding-right: 15px;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: grey;
+  vertical-align: middle;
+}
+.friends-button{
+  margin-left: 5px;
+  margin-top: 7px;
+  font-size: 11px;
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: 1px;
+  border: none;
+  background-color: rgba(25, 87, 245, 0.852);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.friends-button:hover{
+  opacity: 0.8;
+}
+.friends-button:active{
+  opacity: 0.7;
+}
+
+</style>
+
+<div class="divfor3profiles">
+ 
+  <div class="divforoliver">
+  <div><img class="mainfoto" src="cat.jpg"></div>
+  <div class="name">Oliver</div>
+  <div style="display: grid; grid-template-columns: 22px 1fr;">
+    <div><img  class="roundphoto" src="cat.jpg"></div>
+    <div class="mutualfriends">2 mutual friends</div>
+  </div>
+  
+  <div><button class="friends-button">Add Friend</button></div>
+ </div>
+ 
+ 
+ <div class="divforoliver">
+  <div><img class="mainfoto" src="cat2.jpg"></div>
+  <div class="name">Mimi</div>
+  <div style="display: grid; grid-template-columns: 22px 1fr;">
+    <div><img  class="roundphoto" src="cat.jpg"></div>
+    <div class="mutualfriends">4 mutual friends</div>
+  </div>
+  
+  <div><button class="friends-button">Add Friend</button></div>
+ </div>
+ 
+ <div class="divforoliver">
+  <div><img class="mainfoto" src="dog.jpg"></div>
+  <div class="name">Bobik</div>
+  <div style="display: grid; grid-template-columns: 22px 1fr;">
+    <div><img  class="roundphoto" src="cat.jpg"></div>
+    <div class="mutualfriends">12 mutual friends</div>
+  </div>
+  <div><button class="friends-button">Add Friend</button></div>
+ </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+.maindiv{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0,0,0, 0.2);
+  width: 275px;
+  height: 230px;
+  margin: 0;
+  font-family: Arial;
+}
+.maindiv2{
+  margin-left: 11px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  
+}
+.allinboxes{
+  font-size: 10px;
+  color: grey;
+  margin-bottom: 15px;
+}
+.foto{
+  width: 38px;
+  border-radius: 19px;
+}
+.profil{
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  width: 278px
+}
+.profiltext{
+  margin-left: 7px;
+}
+.nameandtime{
+  display: flex;
+  justify-content: space-between;  
+  align-items: center;
+}
+.name{
+  font-size: 12.5px;
+  font-weight: bold;
+}
+.time{
+  font-size: 10px;
+  color: grey;
+}
+.sales{
+  font-size: 11px;
+  font-weight: bold;
+  margin-top: 3px; 
+}
+.hey{
+  font-size: 10px;
+  color: gray;
+  margin-top: 2.8px;
+}
+
+
+
+.maindivnew{
+ width: 330px;
+ box-shadow: 0 0 5px rgba(0,0,0, 0.2);
+ margin-top: 20px;
+ font-family: Arial;
+ font-size: 12px;
+}
+
+.profil2{
+  display: flex;
+  margin-left: 10px;
+  padding-top: 5px;
+}
+.textdiv{
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.profilename{
+  display: flex;
+  margin-top: 4px;
+  margin-bottom: 2px;
+}
+.supersimple{
+  font-weight: bold;
+}
+.dev{
+  color: grey;
+  margin-left: 3px;
+}
+.backend{
+  line-height: 15px;
+  margin-bottom: 8px;
+}
+.link{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(218, 206, 206, 0.73)grey;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-right: 13px;
+  margin-bottom: 12px;
+}
+.empty{
+  background-color: rgba(218, 206, 206, 0.73);
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+.videoinfo{
+  flex: 1;
+}
+.videoinfo1{
+  color: grey;
+  margin-bottom: 4px;
+}
+.videoinfo2{
+  line-height: 15px;
+}

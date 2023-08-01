@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+<style> 
+.cat {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+  margin-left: 11px;
+}
+
+.text-box {
+  font-size: 18px;
+  border: none;
+  width: 300px;
+  vertical-align: middle;
+  font-family: Arial;
+  color: grey;
+  font-size: 14px;
+  margin-right: 0px;
+  display: inline-block;
+  
+}
+.tweet-button{
+  background-color: rgb(29, 155, 240);
+  color: white;
+  border: none;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+.tweet {
+ border-color: rgb(0, 0, 0);
+ box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+ border-radius: 6px;
+ width: 475px;
+ height: 60px;
+ padding-top: 11px;
+ padding-bottom: 0px;
+ margin-left: 20px;
+}
+.oliver{
+  font-family: Arial; 
+  width: 125px;
+  height: 198px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: 35px;
+  padding-right: 5px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.foto{
+  width: 130px;
+  height: 124px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  transition: 0.15s;
+}
+.foto:hover{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.57);
+}
+.name{
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.friends{
+  font-size: 11px;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  color: grey;
+}
+.friends-button{
+  margin-left: 5px;
+  margin-top: 7px;
+  font-size: 11px;
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  background-color: rgba(25, 87, 245, 0.852);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.friends-button:hover{
+  opacity: 0.8;
+}
+.friends-button:active{
+  opacity: 0.7;
+}
+
+
+.mimi{
+  font-family: Arial; 
+  width: 125px;
+  height: 198px;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-left: 15px;
+  padding-right: 5px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+.foto1{
+  width: 130px;
+  height: 124px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  transition: 0.15s;
+}
+.foto1:hover{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.57);
+}
+.name1{
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.friends1{
+  font-size: 11px;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  color: grey;
+}
+.friends-button1{
+  margin-left: 5px;
+  margin-top: 7px;
+  font-size: 11px;
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  background-color: rgba(25, 87, 245, 0.852);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.friends-button1:hover{
+  opacity: 0.8;
+}
+.friends-button1:active{
+  opacity: 0.7;
+}
+.mimi, .oliver, .bobik{
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+  
+
+.bobik{
+  font-family: Arial; 
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  width: 125px;
+  height: 198px;
+  margin-top: 30px;
+  margin-left: 15px;
+  padding-right: 5px;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-bottom: 3px;
+  border-color: rgb(0, 0, 0);
+
+}
+.foto2{
+  width: 130px;
+  height: 124px;
+  object-fit: cover;
+  object-position: center;
+  vertical-align: middle;
+  transition: 0.15s;
+}
+.foto2:hover{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.57);
+}
+.name2{
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 8px;
+  padding-left: 5px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+.friends2{
+  font-size: 11px;
+  padding-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 0px;
+  color: grey;
+}
+.friends-button2{
+  margin-left: 5px;
+  margin-top: 7px;
+  font-size: 11px;
+  padding-left: 11.5px;
+  padding-right: 11.5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: none;
+  background-color: rgba(25, 87, 245, 0.852);
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+.friends-button2:hover{
+  opacity: 0.8;
+}
+.friends-button2:active{
+  opacity: 0.7;
+}
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;  
+}
+
+.popular {
+  width: 300px;
+  height: 70px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  cursor: pointer;
+  transition: 0.15s;
+  font-family: Arial;
+  font-size: 15px;
+}
+.popular:hover {
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.57);
+}
+.popular1 , .popular2, .follow {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding-top: 0px;
+  display: inline-block;
+}
+.popular1{
+  width: 62px;
+  height: 70px;
+  margin-top: 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.popular2{
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 10px;
+  width: 88px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.text{
+  height: 70px;
+}
+.name5 {
+font-weight: bold;
+margin-top: 0px;
+}
+.thecat{
+  color: grey;
+}
+.Influencer {
+  color: grey;
+  font-size: 13px;
+}
+.followbutton {
+  width: 50px; 
+  height: 40px;
+  margin-right: 0px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 61px;
+  margin-top: 21px;
+}
+.follow{
+ width: 60px; 
+ height: 28px;
+ border: none;
+ background-color: rgba(29, 109, 248, 0.852);
+ color: white;
+ border-radius: 3px;
+ cursor: pointer;
+ transition: 0.15s;
+}
+ .follow:hover{
+  opacity: 0.8;
+}
+.follow:active{
+  opacity: 0.7;
+}
+
+.hellofriends{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  width: 300px;
+  margin-left: 15px;
+}
+</style>
+
+<div class="tweet">
+  <img class="cat" src="cat.jpg">
+  <p class="text-box"> What is happening? </p>
+  <button class="tweet-button"> Tweet </button>
+</div>
+
+<div class="oliver">
+<img class="foto" src="cat.jpg">
+<p class="name"> Oliver </p>  
+<p class="friends"> 2 mutual friends </p>
+<button class="friends-button"> Add Friend </button>
+</div>
+
+<div class="mimi">
+  <img class="foto1" src="cat2.jpg">
+  <p class="name1"> Mimi </p>  
+  <p class="friends1"> 3 mutual friends </p>
+  <button class="friends-button1"> Add Friend </button>
+</div>
+
+<div class="bobik">
+  <img class="foto2" src="dog.jpg">
+  <p class="name2"> Bobik </p>  
+  <p class="friends2"> 13833 mutual friends </p>
+  <button class="friends-button2"> Add Friend </button>
+</div>
+
+
+
+<div class="hellofriends">
+<div class="popular">
+
+  <div class="popular1">
+    <img src="cat.jpg" class="cat">
+  </div>
+
+ <div class="popular2">
+  <div class="text">
+    <p class="name5"> oliver </p>
+    <p class="thecat"> the cat </p>
+    <p class="Influencer"> Influencer </p>
+  </div>
+ </div>
+
+  <div class="followbutton"><button class="follow"> Follow </button></div>
+</div>
+
+
+<div class="popular">
+
+  <div class="popular1">
+    <img src="cat2.jpg" class="cat">
+  </div>
+
+ <div class="popular2">
+  <div class="text">
+    <p class="name5"> mimi </p>
+    <p class="thecat"> Sleepy cat </p>
+    <p class="Influencer"> Influencer </p>
+  </div>
+ </div>
+
+  <div class="followbutton"><button class="follow"> Follow </button></div>
+</div>
+
+<div class="popular">
+
+  <div class="popular1">
+    <img src="dog.jpg" class="cat">
+  </div>
+
+ <div class="popular2">
+  <div class="text">
+    <p class="name5"> bobik </p>
+    <p class="thecat"> Happy dog </p>
+    <p class="Influencer"> Influencer </p>
+  </div>
+ </div>
+
+  <div class="followbutton"><button class="follow"> Follow </button></div>
+</div>
+</div>
+
+
+
+
+
+</body>
+</html>

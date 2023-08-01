@@ -1,0 +1,103 @@
+.maindiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 40px;
+  font-family: Arial;
+  font-size: 12px;
+  padding-top: 7px;
+  background-color: rgb(235, 242, 242);
+}
+.fotoandname{
+  display: flex;
+  align-items: center;
+}
+.fotocat{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 17px;
+  margin-left: 60px;
+}
+.name{
+ font-weight: bold;
+ margin-left: 10px;
+}
+.buttons{
+  margin-right: 60px;
+
+  font-size: 10px;
+}
+.button1 {
+ font-size: 12px;
+ padding-left: 7px;
+ padding-right: 7px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ border: none;
+ border-radius: 3px;
+ background-color: #0b7af1c9;
+ color: white;
+ margin-right: 3px;
+}
+.button2{
+  font-size: 12px;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: none;
+  border-radius: 3px;
+  background-color: #d9dfe3c9;
+  color: black;
+  margin-right: 3px;
+}
+
+.discordmaindiv{
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  top: 47px;
+  left: 0;
+  bottom: 0;
+  background-color: rgb(76, 73, 73);
+}
+.imagediv{
+ width: 50px;
+ background-color: #2a2828;
+ margin-left: 0px;
+ padding-top: 10px;
+}
+.fotocat2{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 17px;
+  margin-left: 7px;  
+}
+.rightdiv{
+  padding-left: 13px;
+  font-family: Arial;
+  font-size: 12px;
+  width: 110px;
+  padding-top: 10px;
+  padding-right: 13px;
+}
+.info{
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: rgb(228, 228, 228);
+}
+.info2{
+  padding-top: 10px;
+  color:grey;
+  line-height: 23px;
+}
