@@ -1,0 +1,12 @@
+const toggleBtn = document.querySelector(".sidebar-toggle");
+const closeBtn = document.querySelector(".close-btn");
+const sideBar = document.querySelector(".sidebar");
+
+toggleBtn.addEventListener("click", function () {
+  sideBar.classList.toggle("show-sidebar");
+});
+
+closeBtn.addEventListener("click", function () {
+  sideBar.classList.remove("show-sidebar");
+});
+//the main thing is to hide sidebar by default in css and than add it when we click the button

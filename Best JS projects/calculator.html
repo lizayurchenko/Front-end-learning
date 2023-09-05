@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+  </head>
+  <style>
+    body {
+      background: gainsboro;
+      font-family: Arial;
+    }
+    .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .heading {
+      font-size: 40px;
+    }
+    .calculator {
+      max-width: 290px;
+      background-color: black;
+      padding-left: 20px;
+      padding-right: 10px;
+      padding-top: 40px;
+      border-radius: 10px;
+    }
+    .button,
+    .yellow-buttons,
+    .button-clear,
+    .button-equal {
+      border-radius: 40px;
+      border: none;
+      width: 60px;
+      height: 60px;
+      margin-right: 7px;
+      margin-bottom: 14px;
+      font-size: 25px;
+      font-family: Arial;
+      background-color: rgb(64, 64, 64);
+      color: white;
+      cursor: pointer;
+    }
+    .js-result {
+      font-family: Arial;
+      font-size: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .yellow-buttons {
+      background-color: rgb(255, 174, 0);
+    }
+    .button-clear {
+      font-size: 17px;
+    }
+  </style>
+  <body>
+    <div class="main">
+      <p class="heading">Calculator</p>
+      <div class="calculator">
+        <p class="js-result"></p>
+
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+
+        <button class="yellow-buttons">+</button>
+
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+
+        <button class="yellow-buttons">-</button>
+
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+
+        <button class="yellow-buttons">*</button>
+
+        <button class="button">0</button>
+        <button class="button">.</button>
+
+        <button class="button-equal">=</button>
+
+        <button class="yellow-buttons">/</button>
+
+        <button class="button-clear">Clear</button>
+      </div>
+    </div>
+
+    <script>
+      let calculation = localStorage.getItem("calculation") || "";
+      const buttons = document.querySelectorAll(".button, .yellow-buttons");
+      const btnEqual = document.querySelector(".button-equal");
+      const btnClear = document.querySelector(".button-clear");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          let value = this.textContent;
+          calculation += value;
+          showResult();
+          localStorage.setItem("calculation", calculation);
+        });
+      });
+
+      function showResult() {
+        document.querySelector(".js-result").innerHTML = calculation;
+      }
+
+      btnEqual.addEventListener("click", function () {
+        calculation = eval(calculation);
+        showResult();
+        localStorage.setItem("calculation", calculation);
+      });
+
+      btnClear.addEventListener("click", function () {
+        calculation = "";
+        showResult();
+        localStorage.setItem("calculation", calculation);
+      });
+    </script>
+  </body>
+</html>
