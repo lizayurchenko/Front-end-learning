@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Euniqa course</title>
+</head>
+
+<body>
+  <script>
+    //this conspect include information about functions, arrays, objects and loops
+
+    //10.08.2023
+    ///////////////////////////////////////////////////////
+    //Functions
+    function logger() {
+      console.log(`My name is Lisa`);
+    }
+    logger()
+
+    function fruitProcessor(oranges, apples) {
+      const juice = `Juice with ${oranges} oranges and ${apples} apples`;
+      return juice;
+    }
+
+    //apples and oranges are parameters (variables inside the function) (2,3) are arguments of function
+
+
+    //Functions declaration
+    //with declaration we can declare function before it is written
+    const age1 = calcAge1(1991);
+
+    function calcAge1(birthYear) {
+      return 2037 - birthYear;
+    }
+
+
+    //Functions expression
+    //with it code can be more clear, function is saved in variable
+    const calcAge2 = function (birthYear) {
+      return 2037 - birthYear;
+    }
+    const age2 = calcAge2(1991);
+
+    console.log(age1, age2);
+
+
+    //Arrow functions
+    //shorter way to write functions, can be more complex when we have more parameters, uses no keywords 
+    const calcAge3 = birthYear => 2037 - birthYear;
+    console.log(calcAge3(1991));
+
+    const yearsUntilRetirement = (birthYear, firstName) => {
+      const age = 2023 - birthYear;
+      const retirement = 65 - age;
+      //return retirement;
+      return `${firstName} retires in ${retirement} years`;
+    }
+    console.log(yearsUntilRetirement(2003, 'Lisa'));
+    console.log(yearsUntilRetirement(1980, 'Bob'));
+
+
+
+    //functions calling other functions
+    function cutFruitPieces(fruit) {
+      return fruit * 4;
+    }
+
+    function fruitProcessor(oranges, apples) {
+      const orangePieces = cutFruitPieces(oranges);
+      const applePieces = cutFruitPieces(apples);
+
+      const juice = `Juice with ${orangePieces} pieces of orange and ${applePieces} pieces of apple`;
+      return juice;
+    }
+    console.log(fruitProcessor(2, 3));
+
+
+
+    //reviewing functions
+    const calcAge = function (birthYear) {
+      return 2023 - birthYear;
+    }
+
+    const whenRetirement = function calculateYearsUntilRetirement(birthYear, firstName) {
+      const age = calcAge(birthYear);
+      const retirement = 65 - age;
+      if (retirement > 0) {
+        return console.log(`${firstName} retires in ${retirement} years`);
+
+      } else {
+        return console.log(`${firstName} is already retired`);
+      }
+    }
+    console.log(whenRetirement(2003, 'Lisa'));
+
+
+    //11.08.2023
+    //////////////////////////////////////////////////////////////
+    //Introduction to arrays
+    //An array is like big container with stored data
+    const friends = ['Michael', 'Steven', 'Peter'];
+    const years = new Array(1991, 1984, 2008, 2020); //array function, but brackets are more usual
+
+    console.log(friends[0]); //when we whant to see Michael in console
+    console.log(friends[2]);
+
+    console.log(friends.length); //to count how many values in array
+    console.log(friends[friends.length - 1]); //shows Peter in console
+
+    friends[2] = 'Lisa'; //we are replacing the second value in the array
+    console.log(friends);
+    //we can change array despite it is declared with const, but we can`t change entire array like that: friends = ['Bob', 'Alice'];
+    const firstName = 'Lisa'
+    const lisa = [firstName, 'Yurchenko', 2023 - 2003, 'student', friends]; //notice that we can add array to another array as we did with friends
+    console.log(lisa);
+
+
+
+    //Exercise
+    const calcAge4 = function (birthYear) {
+      return 2023 - birthYear;
+    }
+    const years4 = [1990, 1967, 2002, 2010, 2018];
+
+    //console.log(calcAge4(years4)); we cannot do operations with array, only with its single elements
+
+    const age11 = calcAge4(years4[0]);
+    const age12 = calcAge4(years4[1]);
+    const age13 = calcAge4(years4[years.length - 1]);
+    console.log(age11, age12, age13);
+
+    const ages = [calcAge4(years4[0]), calcAge4(years4[1]), calcAge4(years4[years4.length - 1])];
+    console.log(ages); //this is shorter than before
+
+
+    //Basic array operations (methods)
+    myFriends = ['Michael', 'Steven', 'Peter'];
+    const newLength = myFriends.push('Jay'); //adds element on the LAST position in the array
+    console.log(myFriends);
+    console.log(newLength); //it shows length of array
+
+    myFriends.unshift('Lisa'); //adds element on the FIRST position in the array
+    console.log(myFriends);
+
+    myFriends.pop(); //opposite to the push - removes last element, we don`t even need to write smth in brackets
+    const popped = myFriends.pop();//shows which element was remoted
+    console.log(popped);
+    console.log(myFriends);
+
+
+    myFriends.shift(); //opposite to the unshift - removes first element
+    console.log(myFriends);
+
+    console.log(myFriends.indexOf('Steven')); //shows index of element
+
+    console.log(myFriends.includes('Steven')); //returns true or false
+    console.log(myFriends.includes('Bob'));
+
+
+    //12.08.2023
+    //Introduction to objects
+    const lisasArray = [
+      'Lisa',
+      'Yurchenko',
+      2023 - 2003,
+      'student',
+      ['Michael', 'Peter', 'Steven']
+    ]; //that is an array and we can not define names of its elements, just using an index
+
+    const lisas = {
+      firstName: 'Lisa',
+      lastName: 'Yurchenko',
+      age: 2023 - 2003,
+      occupation: 'student',
+      friends: ['Michael', 'Peter', 'Steven']
+    } //with it we have an object which contains 5 key value pairs. firstName: = key, property 'Lisa' = value
+
+    //in array order of elements is important, we use them for more ordered data. For object order of elements doesn`t matter, it`s used for more unstructured data
+
+    console.log(lisas);
+    console.log(lisas.lastName); //way to get property with dot
+    console.log(lisas['lastName']); //way to get property with brackets
+
+    const nameKey = 'Name';
+    console.log(lisas['first' + nameKey]);
+    console.log(lisas['last' + nameKey]); //with brackets we can make different operations, with dot not. With dot we can use just real property name, not computed
+    //When we have to compute property name we use brackets, in all other cases - dot (dot is more cleaner)
+
+    const interestedIn = prompt('What do you whant to know about Lisa? Choose between firstName, lastName, age, occupation,friends');
+    console.log(lisas[interestedIn]);
+
+    if (lisas[interestedIn]) {
+      console.log(lisas[interestedIn]);
+    } else {
+      console.log('Wrong request! Choose between firstName, lastName, age, occupation and friends');
+    }
+
+    //ways to add properties with value to object
+    lisas.location = 'Germany';
+    lisas['instagram'] = 'liza_yurchenko';
+    console.log(lisas);
+
+
+    console.log(`${lisas.firstName} has ${lisas.friends.length} friends, and her best friend called ${lisas.friends[0]}`); //to write in the console: Lisa has 3 friends, and her best friend called Michael
+
+    //Object methods
+    //function is just another type of value
+    const lisa2 = {
+      firstName: 'Lisa',
+      lastName: 'Yurchenko',
+      birthYear: 2003,
+      occupation: 'student',
+      friends: ['Michael', 'Peter', 'Steven'],
+      hasDriversLicence: true,
+      /*calcAge: function () {
+      return 2023 - this.birthYear; 
+      //this means the same if we wrote lisa2.birthYear
+      }*/
+
+      calcAge: function () {
+        this.age = 2023 - this.birthYear; //this means the same if we wrote lisa2.birthYear
+        return this.age;
+      },
+
+      getSummary: function () {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.occupation} and she has ${this.hasDriversLicence ? 'a' : 'no'} driver's licence.`
+      }
+    };
+    //console.log(lisa2.calcAge());
+    //console.log(lisa2['calcAge']());
+    console.log(this.age);
+    console.log(lisa2.getSummary());
+
+
+    //////////////////////////////////////////////////////////
+    //Loops
+    //helps us to make repetitive tasks and not to repeate the same code over and over again
+    console.log('Lifting weights repetition 1');
+    console.log('Lifting weights repetition 2');
+    console.log('Lifting weights repetition 3');
+    console.log('Lifting weights repetition 4');
+    console.log('Lifting weights repetition 5');
+    console.log('Lifting weights repetition 6');
+    console.log('Lifting weights repetition 7');
+    console.log('Lifting weights repetition 8');
+    console.log('Lifting weights repetition 9');
+    console.log('Lifting weights repetition 10');
+
+    //for loop keeps running while condition is TRUE (rep <= 10)
+    for (let rep = 1; rep <= 10; rep++) {
+      console.log(`Lifting weights repetition ${rep}`);
+    }
+
+
+    //looping arrays, breaking and continuing
+    const yelyzaveta = [
+      'Lisa',
+      'Yurchenko',
+      2003,
+      'student',
+      ['Michael', 'Peter', 'Steven'],
+      true
+    ];
+
+    const types = [];
+
+
+    for (let i = 0; i <= yelyzaveta.length; i++) {
+      console.log(yelyzaveta[i], typeof yelyzaveta[i]);
+      //we created it to see every value of array in console
+
+      types[i] = typeof yelyzaveta[i];
+      //Filling types array
+
+      types.push(typeof yelyzaveta[i]);
+      //Another way of filling types array, more clear
+    }
+    console.log(types);
+
+
+    const years5 = [1991, 2007, 1969, 2020];
+    const ages5 = [];
+    for (let i = 0; i < years5.length; i++) {
+      //ages5[i] = 2023 - years5[i];
+      //or 
+      ages5.push(2023 - years5[i]);
+    }
+    console.log(ages5);
+
+    //continue and break
+    for (let i = 0; i <= yelyzaveta.length; i++) {
+      if (typeof yelyzaveta[i] !== 'string') continue;
+      //everything except strings will be skipped. It means: if the type of next element is not a string, then continue
+      console.log(yelyzaveta[i], typeof yelyzaveta[i]);
+    }
+
+    for (let i = 0; i <= yelyzaveta.length; i++) {
+      if (typeof yelyzaveta[i] === 'number') break;
+      //when the first number is fiund, nothing else will printed
+      console.log(yelyzaveta[i], typeof yelyzaveta[i]);
+    }
+
+    //Looping backwards 
+    const yelyzaveta2 = [
+      'Lisa',
+      'Yurchenko',
+      2003,
+      'student',
+      ['Michael', 'Peter', 'Steven'],
+    ];
+
+    for (let i = yelyzaveta2.length - 1; i >= 0; i--) {
+      console.log(yelyzaveta2[i]);
+    }
+
+    //Loops in loops
+    for (let exercise = 1; exercise < 4; exercise++) {
+      console.log(`----------Starting exercise ${exercise}----------`)
+
+
+      for (let repetition = 1; repetition < 6; repetition++) {
+        console.log(`Exercise number ${exercise} Lifting weight repetition ${repetition}`);
+      }
+    }
+    //that is what we get in the console: below each of 3 exercises we see 5 repetitions
+
+    //while loop
+    for (let rep = 1; rep <= 10; rep++) {
+      console.log(`Lifting weights repetition ${rep}`);
+    }
+
+    let rep = 1;
+    while (rep <= 10) {
+      console.log(`Lifting weights repetition ${rep}`);
+      rep++
+    } //runs while the condition is true
+    //has same result as let-loop upwards
+
+
+    let dice = Math.trunc(Math.random() * 6) + 1;
+    //dice = игральная кость
+    //Math.random creates number between 0 and 1, decimal number (десятичное число между 0 и 1)
+    //Math.trunc - возвращает целое число
+    //+1 because without it, we get number between 0 and 5 
+    console.log(dice);
+
+    while (dice !== 6) {
+      console.log(`You rolled a ${dice}`);
+      dice = Math.trunc(Math.random() * 6) + 1;
+      if (dice === 6) console.log('Loop is about to end...')
+    }
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

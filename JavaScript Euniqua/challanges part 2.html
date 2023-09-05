@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Challanges p2</title>
+</head>
+
+<body>
+  <script>
+    //Coding challange #1
+    const calcAverageScore = (a, b, c) => (a + b + c) / 3;
+
+    let scoreDolphins = calcAverageScore(44, 23, 71);
+    let scoreCoalas = calcAverageScore(65, 54, 49);
+
+    function checkWinner(avgDolphins, avgCoals) {
+      if (avgDolphins >= 2 * avgCoals) {
+        console.log(`Dolphins win (${avgDolphins} vs ${avgCoals})`);
+      } else if (avgCoals >= 2 * avgDolphins) {
+        console.log(`Coals win (${avgCoals} vs ${avgDolphins})`);
+      } else { console.log(`No team wins! (${avgCoals} vs ${avgDolphins})`); }
+    }
+
+    checkWinner(scoreDolphins, scoreCoalas);
+
+    scoreDolphins = calcAverageScore(85, 54, 41);
+    scoreCoalas = calcAverageScore(23, 34, 27);
+    checkWinner(scoreDolphins, scoreCoalas);
+
+
+    //Coding challange #2
+
+    /*function calcTip(bill) {
+      let tip = 0;
+      if (bill >= 50 && bill <= 300) {
+        tip = Math.round(bill * 0.15);
+      } else {
+        tip = Math.round(bill * 0.2);
+      }
+      return tip;
+    }
+    console.log(calcTip(57));
+
+    const bills = [125, 555, 44];
+    const tips = [calcTip(bills[0]),
+    calcTip(bills[1]),
+    calcTip(bills[bills.length - 1])];
+
+    console.log(tips);
+
+    const total = [bills[0] + tips[0], bills[1] + tips[1], bills[bills.length - 1] + tips[tips.length - 1]];
+    console.log(total);*/
+
+    //Coding challange #3
+    const lisas = {
+      firstName: 'Lisa',
+      lastName: 'Yurchenko',
+      age: 2023 - 2003,
+      occupation: 'student',
+      friends: ['Michael', 'Peter', 'Steven']
+    }
+    console.log(`${lisas.firstName} has ${lisas.friends.length} friends, and her best friend called ${lisas.friends[0]}`);
+
+    //Coding challange #4
+    const mark = {
+      firstName: 'Mark',
+      lastName: 'Miller',
+      mass: 78,
+      height: 1.69,
+      calcBMI: function () {
+        this.bmi = Math.round(this.mass / this.height ** 2);
+        return this.bmi;
+      }
+    };
+    const john = {
+      firstName: 'John',
+      lastName: 'Smith',
+      mass: 92,
+      height: 1.95,
+      calcBMI: function () {
+        this.bmi = Math.round(this.mass / this.height ** 2);
+        return this.bmi;
+      }
+    };
+    mark.calcBMI();
+    console.log(mark.bmi);
+
+    john.calcBMI();
+    console.log(john.bmi);
+
+    if (john.bmi > mark.bmi) {
+      console.log(`${john.firstName}'s BMI (${john.bmi}) is higher than ${mark.firstName}'s (${mark.bmi})!`);
+    } else if (mark.bmi > john.bmi) {
+      console.log(`${mark.firstName}'s BMI (${mark.bmi}) is higher than ${john.firstName}'s (${john.bmi})!`);
+    } else {
+      console.log(`${mark.firstName}'s BMI (${mark.bmi}) is equal to ${john.firstName}'s (${john.bmi})!`);
+    }
+
+    //Coding challange #4
+
+    function calcTip(bill) {
+      let tip = 0;
+      if (bill >= 50 && bill <= 300) {
+        tip = Math.round(bill * 0.15);
+      } else {
+        tip = Math.round(bill * 0.2);
+      }
+      return tip;
+    };
+
+    const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+    const tips = [];
+    const totals = [];
+
+
+    for (let i = 0; i < bills.length; i++) {
+      tips.push(calcTip(bills[i]));
+      totals.push(tips[i] + bills[i])
+    }
+    console.log(bills, tips, totals);
+
+
+
+    function calcAverage(arr) {
+      let sum = 0;
+      for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+      }
+      return sum / arr.length;
+    }
+    console.log(calcAverage(totals));
+
+
+  </script>
+
+
+</body>
+
+</html>

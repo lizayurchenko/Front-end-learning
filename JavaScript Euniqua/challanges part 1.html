@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Challanges p1</title>
+</head>
+
+<body>
+  <script>
+    //exercise 1
+    const heightMark = 1.69;
+    const weightMark = 78;
+
+    const heightJonas = 1.95;
+    const weightJonas = 92;
+
+    const bmiMark = Math.round(weightMark / (heightMark * heightMark));
+    const bmiJonas = Math.round(weightJonas / (heightJonas * heightJonas));
+
+    const markHigherBMI = bmiMark < bmiJonas;
+
+    console.log(bmiMark, bmiJonas, markHigherBMI);
+
+    console.log();
+
+    //exercise 2
+    if (bmiMark < bmiJonas) {
+      console.log(`John's BMI (${bmiJonas}) is higher than Mark's!`);
+    } else {
+      console.log(`Mark's BMI (${bmiMark}) is higher than John's!`);
+    }
+
+    //exercise 3
+    const Dolphins = (97 + 112 + 101) / 3
+    const Koals = (109 + 95 + 106) / 3
+
+    if (Dolphins > Koals && Dolphins >= 100) {
+      console.log('Dolphins win!');
+    } else if (Dolphins < Koals && Koals >= 100) {
+      console.log('Koals win!');
+    } else if (Dolphins === Koals && Dolphins >= 100 && Koals >= 100) {
+      console.log('It`s a draw!');
+    } else { console.log('No one wins'); }
+
+    //exercise 4
+    const day = 'sunday';
+
+    if (day === 'monday') {
+      console.log('Plan course structure');
+      console.log('Go to coding meetup');
+    } else if (day === 'thuesday') {
+      console.log('Prepare new videos');
+    } else if (day === 'wednesday' || day === 'thursday') {
+      console.log('Write code examples');
+    } else if (day === 'friday') {
+      console.log('Record videos');
+    } else if (day === 'saturday' || day === 'sunday') {
+      console.log('Enjoy weekend!');
+    } else { console.log('Not a valid day!'); }
+
+
+
+
+    switch (day) {
+      case 'monday':
+        console.log('Plan course structure');
+        console.log('Go to coding meetup');
+        break;
+
+      case 'thuesday':
+        console.log('Prepare new videos');
+        break;
+
+      case 'wednesday':
+      case 'thursday':
+        console.log('Write code examples');
+        break;
+
+      case 'friday':
+        console.log('Record videos');
+        break;
+
+      case 'saturday':
+      case 'sunday':
+        console.log('Enjoy weekend!');
+        break;
+
+      default:
+        console.log('Not a valid day!');
+    }
+
+    //exercise 5
+    const bill = 430;
+    const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+    console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`); 
+  </script>
+</body>
+
+</html>

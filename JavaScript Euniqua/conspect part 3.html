@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conspect p3</title>
+  </head>
+
+  <body>
+    <script>
+      //Developer skills & Editor Setup
+      'use strict';
+      /*We should always use 'use strict' (strict mode) when we are starting coding
+       */
+
+      const x = '23';
+      if (x === 23) console.log(23);
+      const calcAge = (birthYear) => 2023 - birthYear;
+      //prettier settings are in JavaScript Euniqua/.prettierrc
+      console.log(); //when we write cl, we automaticall get console.log(); These sections are in lisas.code-snippets
+      //BUG FIXME these settings are in settings.json
+      //terminal is the way of giving computer instructions
+
+      //1
+      function calcMinMax(arr) {
+        let max = arr[0];
+        let min = arr[0];
+
+        for (let i = 0; i < arr.length; i++) {
+          const curTemp = arr[i];
+
+          if (typeof curTemp !== 'number') continue;
+          if (curTemp > max) max = curTemp;
+          if (curTemp < min) min = curTemp;
+        }
+
+        console.log(max, min);
+      }
+      calcMinMax([2, 5, 'error', 99, 8]);
+
+      //2
+      const calcTempAmplitude = function (temps) {
+        let max = temps[0];
+        let min = temps[0];
+
+        for (let i = 0; i < temps.length; i++) {
+          const curTemp = temps[i];
+          if (typeof curTemp !== 'number') continue;
+          if (curTemp > max) max = curTemp;
+          if (curTemp < min) min = curTemp;
+        }
+        //console.log(max, min);
+        return `The minimum temperature is ${min}, the maximum is ${max}.The temperature amplitude is ${
+          max - min
+        }`;
+      };
+      console.log(calcTempAmplitude([2, 5, 'error', 99, 8]));
+
+      //3
+      function calcMinMax(arr1, arr2) {
+        const arr = arr1.concat(arr2);
+
+        let max = arr[0];
+        let min = arr[0];
+
+        for (let i = 0; i < arr.length; i++) {
+          const curTemp = arr[i];
+
+          if (typeof curTemp !== 'number') continue;
+          if (curTemp > max) max = curTemp;
+          if (curTemp < min) min = curTemp;
+        }
+
+        return `The minimum temperature is ${min}, the maximum is ${max}.The temperature amplitude is ${
+          max - min
+        }`;
+      }
+
+      console.log(calcMinMax([1, 2, 5, 'error', 99, 8], [3, 100, 6]));
+      //to solve the problem we need to figure out all details about it, than divide by small tasks. If we don`t now what to do with some particular task, we can make research in Internet
+
+      //Software bug - defect or problem in a computer program. Basicall, any unexpected or unintended behaviour of a computer program is a software bug
+      //debugging - process of finding, fixing and preventing bugs
+      //1. indentify bug 2. Find where is it (for ex wit console) 3.fix it 4. prevent it from happening again
+
+      const measureKelvin = function () {
+        const measurement = {
+          type: 'temperature',
+          unit: 'cec49ius',
+          value: prompt('Degrees celcius:'),
+        };
+
+        console.table(measurement);
+        console.warn(measurement);
+        console.error(measurement);
+
+        const kelvin = Number(measurement.value) + 273;
+        return kelvin;
+      };
+      console.log(measureKelvin());
+
+      //4
+      const forecast = function (arr) {
+        let str = ''; //in each interation we will add to the string current value of the array
+        for (let i = 0; i < arr.length; i++) {
+          str = str + `${arr[i]}C in ${i + 1} days...`; //str = the current value of string + array at the current position. `` we use here just to add C and in days
+        }
+        console.log('...' + str);
+      };
+
+      forecast([1, 7, 9]);
+
+      const forecast2 = function (arr) {
+        let str = '';
+        for (let i = 0; i < arr.length; i++) {
+          str = str + `${arr[i]}C in ${i + 1} days;`;
+        }
+        console.log(str);
+      };
+      forecast2([1, 7, 9]);
+    </script>
+  </body>
+</html>
